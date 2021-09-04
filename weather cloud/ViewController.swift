@@ -10,9 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var cityTextbox: UITextField!
     
-    // API KEY: 82f0501bfdaf7bbcb708b85e899d3bb5
-    // api.openweathermap.org/data/2.5/weather?q=London,uk&appid=82f0501bfdaf7bbcb708b85e899d3bb5&units=imperial
-    
     @IBAction func didTapGo() {
         
         guard cityTextbox.text?.isEmpty == false else {
@@ -22,7 +19,7 @@ class ViewController: UIViewController {
         
         var components = URLComponents(string: "http://api.openweathermap.org/data/2.5/weather?")
         let cityQuery = URLQueryItem(name: "q", value: cityTextbox.text)
-        let appIdQuery = URLQueryItem(name: "appid", value: "82f0501bfdaf7bbcb708b85e899d3bb5")
+        let appIdQuery = URLQueryItem(name: "appid", value: "Past here")
         let unitsQuery = URLQueryItem(name: "units", value: "imperial")
         
         components?.queryItems = [cityQuery, appIdQuery, unitsQuery]
